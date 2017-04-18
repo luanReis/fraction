@@ -12,9 +12,6 @@ public class Fraction {
     }
 
     public Fraction add(Fraction that) {
-        if (that.integerValue != 0)
-            return new Fraction(this.integerValue + that.integerValue);
-        else
-            return this;
+        return new Fraction(this.integerValue + that.integerValue);
     }
 }
