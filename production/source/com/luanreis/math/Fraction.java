@@ -11,7 +11,10 @@ public class Fraction {
         return integerValue;
     }
 
-    public Fraction add(Fraction fraction) {
-        return this;
+    public Fraction add(Fraction that) {
+        if (that.integerValue != 0)
+            return that;
+        else
+            return this;
     }
 }
