@@ -13,7 +13,7 @@ public class Fraction {
 
     public Fraction add(Fraction that) {
         if (that.integerValue != 0)
-            return that;
+            return new Fraction(this.integerValue + that.integerValue);
         else
             return this;
     }
