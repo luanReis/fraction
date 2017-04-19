@@ -46,7 +46,6 @@ public class AddFractionsTest {
     @Test
     public void commonDenominatorIsOne() throws Exception {
         Fraction sum = new Fraction(2, 1).add(new Fraction(3, 1));
-        assertEquals(5, sum.intValue());
         assertEquals(5, sum.getNumerator());
         assertEquals(1, sum.getDenominator());
     }
