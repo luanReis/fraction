@@ -39,8 +39,7 @@ public class AddFractionsTest {
     @Test
     public void nonTrivialButCommonDenominator() throws Exception {
         Fraction sum = new Fraction(1, 5).add(new Fraction(2, 5));
-        assertEquals(3, sum.getNumerator());
-        assertEquals(5, sum.getDenominator());
+        assertEquals(new Fraction(3, 5), sum);
     }
 
     @Test
