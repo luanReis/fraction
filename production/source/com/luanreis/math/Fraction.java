@@ -27,6 +27,11 @@ public class Fraction {
     }
 
     @Override
+    public int hashCode() {
+        return numerator * 31 + denominator;
+    }
+
+    @Override
     public String toString() {
         return String.format("%d/%d", numerator, denominator);
     }
