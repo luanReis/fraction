@@ -35,4 +35,11 @@ public class AddFractionsTest {
         Fraction sum = new Fraction(-2).add(new Fraction(1));
         assertEquals(-1, sum.intValue());
     }
+
+    @Test
+    public void nonTrivialButCommonDenominator() throws Exception {
+        Fraction sum = new Fraction(1, 5).add(new Fraction(2, 5));
+        assertEquals(3, sum.getNumerator());
+        assertEquals(5, sum.getDenominator());
+    }
 }
