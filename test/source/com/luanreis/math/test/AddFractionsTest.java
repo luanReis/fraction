@@ -49,10 +49,4 @@ public class AddFractionsTest {
         assertEquals(5, sum.getNumerator());
         assertEquals(1, sum.getDenominator());
     }
-
-    @Test
-    public void denominatorIsOneWhenOmitted() throws Exception {
-        Fraction sum = new Fraction(3).add(new Fraction(4));
-        assertEquals(1, sum.getDenominator());
-    }
 }
