@@ -54,4 +54,11 @@ public class AddFractionsTest {
                 new Fraction(5, 1),
                 new Fraction(2, 1).add(new Fraction(3, 1)));
     }
+
+    @Test
+    public void differentDenominatorsWithoutReducing() throws Exception {
+        assertEquals(
+                new Fraction(5, 6),
+                new Fraction(1, 2).add(new Fraction(1, 3)));
+    }
 }
