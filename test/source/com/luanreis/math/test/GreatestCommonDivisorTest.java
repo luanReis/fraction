@@ -2,6 +2,7 @@ package com.luanreis.math.test;
 
 import org.junit.Test;
 
+import static com.luanreis.math.NumberTheory.gcd;
 import static org.junit.Assert.assertEquals;
 
 public class GreatestCommonDivisorTest {
@@ -35,12 +36,4 @@ public class GreatestCommonDivisorTest {
         assertEquals(4, gcd(-24, -28));
     }
 
-    private int gcd(int a, int b) {
-        while (b != 0) {
-            int t = b;
-            b = a % t;
-            a = t;
-        }
-        return Math.abs(a);
-    }
 }

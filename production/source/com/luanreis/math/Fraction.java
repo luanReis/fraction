@@ -1,5 +1,7 @@
 package com.luanreis.math;
 
+import static com.luanreis.math.NumberTheory.gcd;
+
 public class Fraction {
     private int numerator;
     private int denominator;
@@ -9,8 +11,9 @@ public class Fraction {
     }
 
     public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
+        int gcd = gcd(numerator, denominator);
+        this.numerator = numerator / gcd;
+        this.denominator = denominator / gcd;
     }
 
     public Fraction add(Fraction that) {
