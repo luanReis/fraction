@@ -102,7 +102,6 @@ public class AddFractionsTest {
     }
 
     @Test
-    @Ignore("Constructor doesn't yet avoid negative denominators")
     public void negativeSignsEverywhere() throws Exception {
         assertEquals(
                 new Fraction(1, 2),

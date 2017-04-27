@@ -42,4 +42,18 @@ public class FractionEqualsTest {
                 new Fraction(6),
                 new Fraction(5));
     }
+
+    @Test
+    public void negativeNumeratorAndDenominator() throws Exception {
+        assertEquals(
+                new Fraction(1, 2),
+                new Fraction(-1, -2));
+    }
+
+    @Test
+    public void negativeDenominator() throws Exception {
+        assertEquals(
+                new Fraction(1, -2),
+                new Fraction(-1, 2));
+    }
 }
