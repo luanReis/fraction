@@ -1,6 +1,7 @@
 package com.luanreis.math.test;
 
 import com.luanreis.math.Fraction;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -60,5 +61,51 @@ public class AddFractionsTest {
         assertEquals(
                 new Fraction(5, 6),
                 new Fraction(1, 2).add(new Fraction(1, 3)));
+    }
+
+    @Test
+    public void reduceResultToWholeNumber() throws Exception {
+        assertEquals(
+                new Fraction(1),
+                new Fraction(1, 3).add(new Fraction(2, 3)));
+    }
+
+    @Test
+    public void oneDenominatorIsAMultipleOfTheOther() throws Exception {
+        assertEquals(
+                new Fraction(11, 8),
+                new Fraction(3, 4).add(new Fraction(5, 8)));
+    }
+
+    @Test
+    public void commonFactorInDenominators() throws Exception {
+        assertEquals(
+                new Fraction(23, 6),
+                new Fraction(3, 2).add(new Fraction(7, 3)));
+    }
+
+    @Test
+    public void reduceResultsEvenWhenDenominatorsAreTheSame() throws Exception {
+        assertEquals(
+                new Fraction(1, 2),
+                new Fraction(1, 4).add(new Fraction(1, 4)));
+    }
+
+    @Test
+    public void negativeFractionAndReducing() throws Exception {
+        assertEquals(
+                new Fraction(1, 2),
+                new Fraction(-1, 4).add(new Fraction(3, 4)));
+        assertEquals(
+                new Fraction(-1, 8),
+                new Fraction(3, 8).add(new Fraction(-1, 2)));
+    }
+
+    @Test
+    @Ignore("Constructor doesn't yet avoid negative denominators")
+    public void negativeSignsEverywhere() throws Exception {
+        assertEquals(
+                new Fraction(1, 2),
+                new Fraction(1, -4).add(new Fraction(-3, -4)));
     }
 }
