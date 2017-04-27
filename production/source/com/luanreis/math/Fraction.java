@@ -11,10 +11,17 @@ public class Fraction {
     }
 
     public Fraction(int numerator, int denominator) {
-        int signOfDenominator = denominator < 0 ? -1 : 1;
-        int gcd = gcd(numerator, denominator) * signOfDenominator;
+        int gcd = gcd(numerator, denominator) * signOfDenominator(denominator);
         this.numerator = numerator / gcd;
         this.denominator = denominator / gcd;
+    }
+
+    private int signOfDenominator(int denominator) {
+        return isNegative(denominator) ? -1 : 1;
+    }
+
+    private boolean isNegative(int number) {
+        return number < 0;
     }
 
     public Fraction add(Fraction that) {
