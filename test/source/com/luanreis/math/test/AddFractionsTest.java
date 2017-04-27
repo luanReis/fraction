@@ -99,6 +99,9 @@ public class AddFractionsTest {
         assertEquals(
                 new Fraction(-1, 8),
                 new Fraction(3, 8).add(new Fraction(-1, 2)));
+        assertEquals(
+                new Fraction(-1, 3),
+                new Fraction(-2, 3).add(new Fraction(1, 3)));
     }
 
     @Test
